@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}delete{% endblock %}
+</head>
+<body>
+{% block para %}
+<form action='' method=POST> {% csrf_token %}
+First Name : {{b.first_name}}
+<br></br>
+Last Name : {{b.last_name}}
+<br></br>
+Email ID : {{b.email1}}z
+<br></br>
+<input type = 'Submit' value="DELETE">
+</form><button onclick="location.href = 'http://localhost:9000/list';" id="myButton" class="float-left submit-button" >DON'T DELETE</button>
+<br></br>
+<a href="/list">VIEW ALL</a>
+{% endblock %}
+</body>
+</html>

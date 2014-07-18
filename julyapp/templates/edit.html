@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}edit page{% endblock %}
+</head>
+<body>
+{% block para %}
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+	<br></br>
+		<tr><i><td align="right">Your First Name : </i></td>
+		<td align="left"><input type 'text' name='firstname' value={{b.first_name}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><i><td align="right">Your Second Name : </i></td>
+		<td align="left"><input type 'text' name='lastname' value={{b.last_name}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><input type="radio" name="sex" id='male' value="{{b.sex}}">Male</td>
+		<td align="left"><input type="radio" name="sex" id='female'value="{{b.sex}}">Female</td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+</table>
+		<td align="center">Currently: <a href="/site_media/media/{{b.uploadfile}}">{{b.uploadfile}}</a></td>
+<table>
+		<tr><td align="right"><i>Browse Your File : </i></td>
+		<td align="left"><input type='file' name='uploadfile' value={{b.uploadfile}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Enter Your Age : </i></td>
+		<td align="left"><input type='int' name='age' value={{b.age}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Enter Your DOB : </i></td>
+		<td align="left"><input type='date' name='dob' value={{b.dob|date:"Y-m-d"}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Your Email ID : </i></td>
+		<td align="left"><input type='email' name='email' value={{b.email1}}></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Are You Married : </i></td>
+		<td align="left"><input type='checkbox' name='marriage' value={{b.marriage}}></td>
+		<td align="center"><input type = 'Submit' value="SUBMIT FOR CORRECTION"></td>
+</table>
+<br></br>
+</form>
+<a href="/list">VIEW ALL</a>
+<br></br>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %}
+		This is my Saran's Webpage
+		{% endblock %}
+	</title>
+{%load humanize %}
+</head>
+<body bgcolor=orange>
+<div id="container">
+
+<div id="header" style="background-color:#FFA500;font-family:arial;
+text-align:center;">
+<h1 style="margin-bottom:0;">This is my Web Page. It Welcomes You.</h1>
+Welcome to My World. Hi, {{username}}
+<br></br>
+<button onclick="location.href = '/userlogout';" id="myButton" class="float-left submit-button" >LOGOUT, BYE BYE</button>
+</div>
+
+<div id="menu" style="background-color:#FFD700;height:580px;width:150px;float:left;">
+<b>
+<a href=".">Index</a>
+<br></br>
+<a href="/usersignup">User Signup</a>
+<br></br>
+<a href="/userlogin">User Login</a>
+<br></br>
+<a href="/mainpage">Mainpage</a>
+<br></br>
+<a href="/add">ADD</a>
+<br></br>
+<a href="/name">Name Details</a>
+<br></br>
+<a href="/namemodel">Name Details in Model Form</a>
+<br></br>
+<a href="/district">District Name Entry</a>
+<br></br>
+<a href="/districtlist">District List</a>
+<br></br>
+<a href="/hello">Hello</a>
+<br></br>
+<a href="/hello1">Hi</a>
+<br></br>
+<a href="https://www.google.co.in">Google</a>
+<br></br>
+<a href="http://saranraj3000.blogspot.in/">Saran Page</a>
+</div>
+
+<div id="content" style="background-color:#EEEEEE;height:580px;width:750px;float:left;">
+{% block para %}{% endblock %}
+</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+Copyright - Saran</div>
+
+</div>
+
+</body>
+</html>

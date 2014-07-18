@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}list{% endblock %}
+</head>
+<body>
+{% block para %}
+<table border="1">
+  <tr>
+    <th>SL. NO.</th>
+    <th>FIRST NAME</th>
+    <th>LAST NAME</th>
+    <th>SEX</th>
+    <th>AGE</th>
+    <th>DOB</th>
+    <th>MARITAL STATUS</th>
+    <th>EMAIL</th>
+    <th>UPLOADED FILE</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
+  </tr>
+{% for i in b %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.first_name}}</td>
+    <td>{{i.last_name}}</td>
+    <td>{{i.sex}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.dob|date:"Y-m-d"}}</td>
+    <td>{% if i.marriage == True %}MARRIED{% else %}UNMARRIED{% endif %}</td>
+    <td>{{i.email1}}</td>
+    <td>{{i.uploadfile}}</td>
+    <td><a href="/edit/{{i.id}}">EDIT</a></td>
+    <td><a href="/delete/{{i.id}}">DELETE</a></td>
+    </tr>
+<br>
+{% endfor %}
+</table> 
+<br></br>
+<a href="/name">Name Details</a>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}name{% endblock %}
+</head>
+<body>
+{% block para %}
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+Hi, {{username}}
+<table>
+	<br></br>
+		<tr><i><td align="right">Your First Name : </i></td>
+		<td align="left"><input type 'text' name='firstname'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><i><td align="right">Your Second Name : </i></td>
+		<td align="left"><input type 'text' name='lastname'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><input type="radio" name="sex" value="male" id='male'>Male</td>
+		<td align="left"><input type="radio" name="sex" value="female" id='female'>Female</td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Browse Your File : </i></td>
+		<td align="left"><input type='file' name='uploadfile'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Enter Your Age : </i></td>
+		<td align="left"><input type='int' name='age'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Enter Your DOB : </i></td>
+		<td align="left"><input type='date' name='dob'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Your Email ID : </i></td>
+		<td align="left"><input type='email' name='email'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Are You Married : </i></td>
+		<td align="left"><input type='checkbox' name='marriage'></td>
+		<td align="left"><input type = 'Submit' value="SAVE"></td>
+</table>
+<br></br>
+<a href="/list">VIEW ALL</a>
+</form>
+<br></br>
+{% if name %}
+{% for i in b %}
+Hi, Your Name is {{i}}<br>
+{% endfor %}
+<br>
+{% endif %}
+{% endblock %}
+</body>
+</html>

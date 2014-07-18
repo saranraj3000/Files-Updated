@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}list{% endblock %}
+</head>
+<body>
+{% block para %}
+<table border="1">
+  <tr>
+    <th>SL. NO.</th>
+    <th>DISTRICT NAME</th>
+    </tr>
+{% for i in b %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.district_name}}</td>
+    </tr>
+<br>
+{% endfor %}
+</table> 
+<br></br>
+<a href="/name">Name Details</a>
+{% endblock %}
+</body>
+</html>

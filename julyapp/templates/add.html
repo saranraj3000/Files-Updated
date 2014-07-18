@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}add{% endblock %}
+{%load humanize %}
+</head>
+<body>
+<div style="background:yellow;border:5px solid #cccccc;padding: 10px;">
+    <br></br>
+{% block para %}
+    a={{a|apnumber}},
+<br></br>
+    b= {{b|apnumber}},
+<br></br>
+    a + b = {{c|apnumber}} 
+<br></br>
+</div>
+    <a href=".">Index</a>
+<br></br>
+    <a href="/mainpage">Mainpage</a>
+<br></br>
+<a href="/name">Name Details</a>
+</br></br>
+<a href="https://www.google.co.in">Google</a>
+<br></br>
+<a href="http://saranraj3000.blogspot.in/">Saran Page</a>
+{% endblock %}
+</body>
+</html>

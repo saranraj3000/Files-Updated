@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		This is my Login Webpage
+		</title>
+</head>
+<body>
+<div id="header" style="background-color:#FFA500;font-family:arial;
+text-align:center;">
+<span style="font-size:15px;color:red;font-weight:bold;font-style:italic;
+font-family: Verdana">
+This is my Web Page. Welcomes You. Please Login... to Enjoy...
+<br></br>
+<br></br>
+<br></br>
+<form action="/userlogin" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+	<br></br>
+		<tr><i><td align="right">User Name : </i></td>
+		<td align="left"><input type 'text' name='username'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><i><td align="right">Password : </i></td>
+		<td align="left"><input type='password' name='password'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+</table>
+<td align="left"><input type = 'Submit' value="SIGN IN"></td>
+</form>
+<br></br>
+<a href="/usersignup">New User</a>
+<br></br>
+<br></br>
+<br></br>
+<span style=text-align:center;>Thank You, Come Again... </span>
+</span>
+</body>

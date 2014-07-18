@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}user login{% endblock %}
+</head>
+<body>
+{% block para %}
+<!---<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+{{user_form.as_p}}
+{{profile_form.as_p}}
+<td align="left"><input type = 'Submit' value="CREATE USER"></td>
+</form>
+!-->
+
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+	<br></br>
+		<tr><i><td align="right">User Name as Your Wish: </i></td>
+		<td align="left"><input type 'text' name='username'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Your Email ID : </i></td>
+		<td align="left"><input type='email' name='email'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><i><td align="right">Password : </i></td>
+		<td align="left"><input type='password' name='password'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Company Name : </i></td>
+		<td align="left"><input type='text' name='company'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+		<tr><td align="right"><i>Your Website : </i></td>
+		<td align="left"><input type='text' name='website'></td></tr>
+		<tr class="blank_row"><td bgcolor="#EEEEEE" colspan="3">&nbsp;</td></tr>
+</table>
+<td align="left"><input type = 'Submit' value="CREATE USER"></td>
+</form>
+{% endblock %}
+</body>
+</html>

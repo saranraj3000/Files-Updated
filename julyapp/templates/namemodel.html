@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}namemodel{% endblock %}
+</head>
+<body>
+{% block para %}
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+{{form1.as_p}}
+<td align="left"><input type = 'Submit' value="SAVE"></td>
+</form>
+{% endblock %}
+</body>
+</html>
